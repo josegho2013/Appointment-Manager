@@ -1,11 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
+import Appointment_manager from "./components/Appointment_manager";
+
 
 function App() {
   return (
-    <div c>
+    <div >
+      <Appointment_manager/>
       
-    <h1>hola</h1>
+
     </div>
   );
 }

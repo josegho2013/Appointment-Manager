@@ -45,6 +45,18 @@ const Appointment_manager = () => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (
+      !input.nombre_de_mascota ||
+      !input.propietario ||
+      !input.telefono ||
+      !input.sintomas ||
+      !input.fecha ||
+      !input.hora
+    ) {
+      alert("Complete todos los campos");
+      return;
+    }
+
     let lista = citas;
     lista.push(input);
     setCitas(lista);
@@ -101,7 +113,7 @@ const Appointment_manager = () => {
         }
         contador++;
       });
-       setInput({ input: arreglo  });
+      setInput({ input: arreglo });
     }
   };
 

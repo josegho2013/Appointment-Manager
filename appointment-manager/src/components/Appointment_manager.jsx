@@ -88,16 +88,37 @@ const Appointment_manager = () => {
     setModalEditar(false);
   };
 
+  const eliminar = (dato) => {
+    var opcion = window.confirm(
+      "Estás Seguro que deseas Eliminar el elemento " + dato.id
+    );
+    if (opcion == true) {
+      var contador = 0;
+      var arreglo = citas;
+      arreglo.map((item) => {
+        if (dato.id == item.id) {
+          arreglo.splice(contador, 1);
+        }
+        contador++;
+      });
+       setInput({ input: arreglo  });
+    }
+  };
+
   return (
     <div>
       <div>
-      <h1>Appointment Manager</h1>
-        <Button className=" boton_registro"  text-center color="success" onClick={() => mostrarModalInsertar()}>
+        <h1>Appointment Manager</h1>
+        <Button
+          className=" boton_registro"
+          text-center
+          color="success"
+          onClick={() => mostrarModalInsertar()}
+        >
           Registrar Nueva cita
         </Button>
-        </div>
+      </div>
       <Container>
-
         <div className="container">
           <div>
             <img
@@ -137,11 +158,15 @@ const Appointment_manager = () => {
                               color="primary"
                               onClick={() => mostrarModalEditar(dato)}
                             >
-                              
                               Editar
                             </Button>
-                          
-                            <Button color="danger">Cancelar</Button>
+
+                            <Button
+                              color="danger"
+                              onClick={() => eliminar(dato)}
+                            >
+                              Eliminar
+                            </Button>
                           </td>
                         </tr>
                       );

@@ -90,13 +90,15 @@ const Appointment_manager = () => {
 
   return (
     <div>
+      <div>
       <h1>Appointment Manager</h1>
-      <Container>
-        <Button color="success" onClick={() => mostrarModalInsertar()}>
+        <Button className=" boton_registro"  text-center color="success" onClick={() => mostrarModalInsertar()}>
           Registrar Nueva cita
         </Button>
+        </div>
+      <Container>
 
-        <div>
+        <div className="container">
           <div>
             <img
               className="imagen"
@@ -135,8 +137,10 @@ const Appointment_manager = () => {
                               color="primary"
                               onClick={() => mostrarModalEditar(dato)}
                             >
+                              
                               Editar
                             </Button>
+                          
                             <Button color="danger">Cancelar</Button>
                           </td>
                         </tr>

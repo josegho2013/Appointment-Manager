@@ -1,9 +1,21 @@
 .imagen{
 
-    width: 100%;
+    width: 58%;
     position: relative;
-    display: flex;
+    
     flex-direction: column;
     justify-content: space-around
 }
 
+.container{
+
+    display: flex;
+}
+h1{
+
+    text-align: center;
+}
+.boton_registro{
+
+    text-align: center;
+}

@@ -129,7 +129,6 @@ const Appointment_manager = () => {
         >
           Registrar Nueva cita
         </Button>
-        
       </div>
       <Container>
         <div className="container">
@@ -141,10 +140,8 @@ const Appointment_manager = () => {
           </div>
           <div>
             {citas.length > 0 && (
-              <Table >
-                 
+              <Table>
                 <thead>
-                 
                   <tr>
                     <th>ID</th>
                     <th>Nombre Mascota</th>
@@ -288,7 +285,7 @@ const Appointment_manager = () => {
 
       <Modal isOpen={modalInsertar}>
         <Form onSubmit={(e) => handleSubmit(e)}>
-        <ModalHeader> Agregar Cita</ModalHeader>
+          <ModalHeader> Agregar Cita</ModalHeader>
           <FormGroup>
             <Label>Id</Label>
             <Input
@@ -298,7 +295,7 @@ const Appointment_manager = () => {
               value={citas?.length + 1}
             />
           </FormGroup>
-         
+
           <FormGroup>
             <Label>Nombre de Mascota</Label>
             <Input
@@ -366,12 +363,12 @@ const Appointment_manager = () => {
             />
             <br />
           </FormGroup>
-         
+
           <Button type="submit" color="success">
             Guardar Cita
           </Button>
           <Button
-            className="btn btn-danger" 
+            className="btn btn-danger"
             onClick={() => cerrarModalInsertar()}
           >
             Cancelar
